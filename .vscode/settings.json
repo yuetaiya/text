@@ -1,0 +1,33 @@
+{
+    // 你的字体配置保留不变
+    "editor.fontFamily": "'Fira Code Light', Consolas, monospace",
+    "editor.fontWeight": "400",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "editor.mouseWheelZoom": true,
+
+    // 1. 统一大部分文字颜色，减少多色区分
+    "editor.tokenColorCustomizations": {
+        // 关键字、类型、函数统一单色
+        "keywords": {"foreground": "#cccccc"},
+        "types": {"foreground": "#cccccc"},
+        "functions": {"foreground": "#cccccc"},
+        "variables": {"foreground": "#cccccc"},
+        "strings": {"foreground": "#99cc99"}, // 仅字符串浅绿，柔和不刺眼
+        "comments": {"foreground": "#666666"}, // 注释浅灰，弱化存在感
+        "numbers": {"foreground": "#cccccc"}
+    },
+
+    // 2. 关闭多余装饰高亮
+    "editor.semanticHighlighting.enabled": false, // 关闭语义高亮（新增一层额外上色，色彩爆炸元凶）
+    "editor.matchBrackets": "never", // 关闭括号高亮色块
+    "editor.selectionHighlight": false, // 关闭选中变量全文档高亮
+    "editor.occurrencesHighlight": "off",
+    
+
+    // 3. 弱化背景高亮、线条
+    "editor.lineHighlightBackground": "#222222", // 当前行极浅底色，几乎看不见
+    "editor.rulers": [], // 关闭竖线标尺
+    "editor.guides.bracketPairs": false, // 关闭彩色配对括号竖线
+    "editor.guides.indentation": false, // 关闭缩进彩色引导线
+}
