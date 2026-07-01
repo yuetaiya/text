@@ -2,9 +2,9 @@
     // 你的字体配置保留不变
     "editor.fontFamily": "'Fira Code Light', Consolas, monospace",
     "editor.fontWeight": "400",
-    "editor.fontLigatures": true,
+    "editor.fontLigatures": false,
     "editor.fontSize": 14,
-    "editor.mouseWheelZoom": false,
+    "editor.mouseWheelZoom": true,
 
     // 1. 统一大部分文字颜色，减少多色区分
     "editor.tokenColorCustomizations": {
