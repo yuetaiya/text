@@ -4,7 +4,7 @@
     "editor.fontWeight": "400",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
-    "editor.mouseWheelZoom": true,
+    "editor.mouseWheelZoom": false,
 
     // 1. 统一大部分文字颜色，减少多色区分
     "editor.tokenColorCustomizations": {
