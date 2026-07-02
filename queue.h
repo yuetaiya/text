@@ -17,8 +17,9 @@ class queue
     int pop();
     int top();
     int gitcap();
-int back();
-
+    int back();
+    bool empty();
+    int size();
 
 
 

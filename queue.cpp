@@ -14,7 +14,7 @@ int *newque=new int[val];
 int newfront=0;
 int newrear=0;
 int newcap=val;
-for(int i=0;i<cap;i++)
+for(int i=0;i<(cap-1);i++)
 {
     newque[i]=que[(front+i)%cap];
     newrear++;
@@ -66,8 +66,25 @@ int queue::gitcap()
 int queue::back()
 {
     if(front==rear)return -1;
-    int a=rear-1;
-    if(a<0)a+=cap;
-    return que[a];
+   return(que[(rear-1)%cap]);
 }
 
+bool queue::empty()
+{
+    if(rear==front)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+
+int queue::size()
+{
+    if(front == rear)return -1;
+    return((rear-front+cap)%cap);
+    
+}
