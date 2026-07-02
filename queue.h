@@ -11,6 +11,7 @@ class queue
 
     public:
     queue();
+~queue();
 
     void expand(int val);
     void push(int val);

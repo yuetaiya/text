@@ -10,6 +10,7 @@
 				"-g",
 				"${workspaceFolder}/a.cpp",
 				"${workspaceFolder}/queue.cpp",
+				"${workspaceFolder}/lqueue.cpp",
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],

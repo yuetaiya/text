@@ -1,6 +1,13 @@
 #include<iostream>
 #include"queue.h"
 using namespace std;
+queue::~queue()
+{
+    delete [] que;
+    que=nullptr;
+}
+
+
 queue::queue():que(nullptr),front(0),rear(0), cap(3)
 {
 
