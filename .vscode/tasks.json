@@ -12,6 +12,7 @@
 				"${workspaceFolder}/queue.cpp",
 				"${workspaceFolder}/lqueue.cpp",
 				"${workspaceFolder}/erfen.cpp",
+				"${workspaceFolder}/diguierfen.cpp",
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
