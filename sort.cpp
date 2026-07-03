@@ -12,3 +12,25 @@ void bubblesort(int a[],int n)
         }
     }
 }
+
+void xuanze(int a[],int n)
+{
+int min=0;
+for(int j=0;j<n;)
+{
+for(int i=j;i<n;i++)
+{
+    if(a[i]<a[min])
+    {
+        min=i;
+    }
+}
+swap(a[j],a[min]);
+j++;
+min=j;
+}
+
+
+
+
+}

@@ -9,9 +9,9 @@ using namespace std;
 
 int main()
 {
-int a[]={5,46,73,3,5764,34,2,775};
-bubblesort(a,8);
-for(int i=0;i<8;i++)
+int a[]={5,46,73,43,5434,3,6,23,4};
+xuanze(a,9);
+for(int i=0;i<9;i++)
 {
     cout<<a[i]<<" ";
 }
