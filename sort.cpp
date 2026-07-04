@@ -38,11 +38,41 @@ void insert(int a[],int n)
     {
       int j=i-1;
       int tem=a[i];
-      while(tem<a[j]&&j>=0)
+      while(j>=0&&tem<a[j])
       {
         a[j+1]=a[j];
         j--;
       }
       a[j+1]=tem;
     }
+}
+
+void shell(int a[],int n)
+{
+    int gra =n/2;
+
+    while(gra!=0)
+    {
+      for(int j=0;j<n;j++)
+      {
+        if((j+gra)>=n)break;
+        if(a[j]>a[j+gra])swap(a[j],a[j+gra]);
+      }
+      gra=gra/2;
+    }
+
+    for(int i=1;i<n;i++)
+    {
+       int tem=a[i];
+       int j=i-1;
+          while(j>=0&&tem<a[j])
+       {
+          a[j+1]=a[j];
+          j--;
+       }
+       a[j+1]=tem;
+    }
+
+
+    
 }

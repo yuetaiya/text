@@ -6,11 +6,10 @@
 #include"sort.h"
 using namespace std;
 
-
 int main()
 {
-int a[]={5,46,73,43,5434,3,6,23,4};
-insert(a,9);
+int a[]={5,46,73,43,5434,3,6,23,4}; 
+shell(a,9);
 for(int i=0;i<9;i++)
 {
     cout<<a[i]<<" ";
