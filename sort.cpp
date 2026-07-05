@@ -49,30 +49,21 @@ void insert(int a[],int n)
 
 void shell(int a[],int n)
 {
-    int gra =n/2;
+    int size=n/2;
 
-    while(gra!=0)
+    for(int gap=size;gap>0;gap/=2)
     {
-      for(int j=0;j<n;j++)
-      {
-        if((j+gra)>=n)break;
-        if(a[j]>a[j+gra])swap(a[j],a[j+gra]);
-      }
-      gra=gra/2;
-    }
-
-    for(int i=1;i<n;i++)
-    {
-       int tem=a[i];
-       int j=i-1;
-          while(j>=0&&tem<a[j])
+       for(int i=gap;i<n;i+=gap)
        {
-          a[j+1]=a[j];
-          j--;
+        int tem=a[i];
+        int j;
+        for(j=i-gap;j>=0&&tem<a[j];j-=gap)
+        {
+           a[j+gap]=a[j];
+        }
+          a[j+gap]=tem;
+
        }
-       a[j+1]=tem;
     }
-
-
-    
+   
 }
