@@ -53,7 +53,7 @@ void shell(int a[],int n)
 
     for(int gap=size;gap>0;gap/=2)
     {
-       for(int i=gap;i<n;i+=gap)
+       for(int i=gap;i<n;i++)
        {
         int tem=a[i];
         int j;
