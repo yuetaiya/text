@@ -67,3 +67,46 @@ void shell(int a[],int n)
     }
    
 }
+
+int speed(int a[],int l,int r)
+{
+int tem=a[l];
+while(r!=l)
+{
+    while(a[r]>=tem)
+ {
+    if(r==l)
+    {
+        a[l]=tem;
+      return l;
+    }
+    r--;
+ }
+
+ a[l]=a[r];
+ while(a[l]<=tem)
+ {
+    if(l==r)
+    {
+        a[l]=tem;
+        return l;
+    }
+    l++;
+ }
+ a[r]=a[l];
+}
+       a[l]=tem;
+       return l;
+}
+
+void kuaisu(int a[],int l,int r)
+{
+    if(l>=r)return;
+     int mid=speed(a,l,r);
+    kuaisu(a,l,mid-1);
+    kuaisu(a,mid+1,r);
+   
+
+
+}
+
