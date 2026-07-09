@@ -2,6 +2,7 @@
 #include<functional>
 #include<iostream>
 using namespace std;
+
 class priorityqueue
 {
 public:
@@ -25,9 +26,6 @@ void push(int val);
 int pop();
 int top();
 bool empty();
-
-
-
 
 
 };

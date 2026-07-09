@@ -103,3 +103,4 @@ int priorityqueue::top()
     throw "数组为空";
     return que[0];
 }
+

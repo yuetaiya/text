@@ -4,7 +4,7 @@
 #include"erfen.h"
 #include"diguierfen.h"
 #include"sort.h"
-#include"dagendui.h"
+
 #include<time.h>
 #include"priorityqueue.h"
 using namespace std;
@@ -12,16 +12,22 @@ using namespace std;
 
 int main()
 {
-  priorityqueue que([](int a,int b){return a>b;});
+ int a[10];
 srand(time(NULL));
 for(int i=0;i<10;i++)
 {
-  que.push(rand()%100);
+  a[i]=(rand()%100);
 }
-while(!que.empty())
+
+for(int p:a)
 {
-cout<<que.top()<<" ";
-que.pop();
+  cout<<p<<" ";
+}
+cout<<endl;
+heapsort(a,10);
+for(int p:a)
+{
+  cout<<p<<" ";
 }
 cout<<endl;
   /* const int count=50000;

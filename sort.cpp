@@ -126,5 +126,47 @@ void mergesort(int a[],int l,int r)
 
 }
 
+void down(int a[],int i,int size)
+{
+    int tem=a[i];
+   
+    while(i<=(size-2)/2)
+    {
+         int choice=2*i+1;
+     if((choice+1)<size&&a[choice+1]>a[choice])choice+=1;
+     if(tem<a[choice])
+     {
+        a[i]=a[choice];
+        i=choice;
+     }
+     else
+     {
+        break;
+     }
+    }
+    a[i]=tem;
+    
+ 
+}
+
+
+
+void heapsort(int a[],int size)
+{
+int n=size-1;
+while(!(size==0))
+{
+    for(int i=(size-1)/2;i>=0;i--)
+    {
+        down(a,i,size);
+    }
+    int p=a[0];
+    a[0]=a[size-1];
+    a[size-1]=p;
+    size--;
+}
+
+}
+
 
 
