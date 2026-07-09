@@ -21,6 +21,7 @@ bool empty();
 int top();
 void print();
 
+void sort();
 
 
 

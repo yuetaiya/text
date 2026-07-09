@@ -15,6 +15,7 @@
 				"${workspaceFolder}/diguierfen.cpp",
 				"${workspaceFolder}/sort.cpp",
 				"${workspaceFolder}/dagendui.cpp",
+				"${workspaceFolder}/priorityqueue.cpp",
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],

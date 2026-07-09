@@ -6,11 +6,24 @@
 #include"sort.h"
 #include"dagendui.h"
 #include<time.h>
+#include"priorityqueue.h"
 using namespace std;
+
 
 int main()
 {
-    
+  priorityqueue que([](int a,int b){return a>b;});
+srand(time(NULL));
+for(int i=0;i<10;i++)
+{
+  que.push(rand()%100);
+}
+while(!que.empty())
+{
+cout<<que.top()<<" ";
+que.pop();
+}
+cout<<endl;
   /* const int count=50000;
     int *arr=new int[count];
      int *brr=new int[count];
@@ -73,15 +86,6 @@ int main()
       }
       cout<<endl;
 */
-
-dagendui a;
-a.push(4);
-a.push(5);
-a.push(6);
-a.push(2);
-a.push(2);
-a.push(3);
-a.print();
 
 
 

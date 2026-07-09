@@ -111,3 +111,12 @@ int dagendui::top()
     if(size==0)return -1;
  return data[0];
 }
+
+
+void dagendui::sort()
+{
+int i=0;
+
+
+
+}
