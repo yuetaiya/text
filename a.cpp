@@ -4,13 +4,14 @@
 #include"erfen.h"
 #include"diguierfen.h"
 #include"sort.h"
+#include"dagendui.h"
 #include<time.h>
 using namespace std;
 
 int main()
 {
     
-   const int count=50000;
+  /* const int count=50000;
     int *arr=new int[count];
      int *brr=new int[count];
       int *crr=new int[count];
@@ -62,7 +63,7 @@ int main()
        quick(frr,0,count);
        end=clock();
        cout<<"mergesort"<<(end-begin)*1.0/CLOCKS_PER_SEC<<"s"<<endl;
-
+*/
 
       /*int a[]={3,3,623,46,3452,3,5,43,45,4,55,3,2};
        mergesort(a,0,12);
@@ -72,6 +73,16 @@ int main()
       }
       cout<<endl;
 */
+
+dagendui a;
+a.push(4);
+a.push(5);
+a.push(6);
+a.push(2);
+a.push(2);
+a.push(3);
+a.print();
+
 
 
 } 
