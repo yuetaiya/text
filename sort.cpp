@@ -65,48 +65,66 @@ void shell(int a[],int n)
 
        }
     }
-   
+
 }
 
 int speed(int a[],int l,int r)
 {
-int tem=a[l];
-while(r!=l)
+   int tem=a[l];
+  
+   while(r>l)
+   {
+   while(r>l&&a[r]>=tem){r--;}
+   if(r==l){a[l]=tem;return l;}
+   a[l]=a[r];
+   while(r>l&&a[l]<=tem){l++;}
+   if(r==l){a[l]=tem;return l;}
+   a[r]=a[l];
+   }
+   return -1;
+}
+
+void quick(int a[],int l,int r)
 {
-    while(a[r]>=tem)
- {
-    if(r==l)
-    {
-        a[l]=tem;
-      return l;
-    }
-    r--;
- }
+    int i=l;
+    int j=r;
+    if(l>=r)return;
+    int mid=speed(a,l,r);
 
- a[l]=a[r];
- while(a[l]<=tem)
- {
-    if(l==r)
-    {
-        a[l]=tem;
-        return l;
-    }
-    l++;
- }
- a[r]=a[l];
-}
-       a[l]=tem;
-       return l;
+    
+   quick(a,i,mid-1);
+   quick(a,mid+1,j);
+   
 }
 
-void kuaisu(int a[],int l,int r)
+void merge(int a[],int l,int mid,int r)
+{
+int b[r-l+1];
+int b1=0;
+int i=l;
+int j=mid+1;
+
+while(i<=mid&&j<=r)b[b1++]=a[i]<=a[j]?a[i++]:a[j++];
+
+while(i<=mid)b[b1++]=a[i++];
+
+while(j<=r)b[b1++]=a[j++];
+
+for(int k=0;k<(r-l+1);k++)a[l+k]=b[k];
+
+
+}
+
+void mergesort(int a[],int l,int r)
 {
     if(l>=r)return;
-     int mid=speed(a,l,r);
-    kuaisu(a,l,mid-1);
-    kuaisu(a,mid+1,r);
-   
+    int mid=((r+l)/2);
+    mergesort(a,l,mid);
+    mergesort(a,mid+1,r);
+    merge(a,l,mid,r);
 
 
 }
+
+
 
