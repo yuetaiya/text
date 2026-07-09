@@ -130,7 +130,7 @@ void down(int a[],int i,int size)
 {
     int tem=a[i];
    
-    while(i<=(size-2)/2)
+    while(i<=size/2-1)
     {
          int choice=2*i+1;
      if((choice+1)<size&&a[choice+1]>a[choice])choice+=1;
@@ -156,7 +156,8 @@ void heapsort(int a[],int size)
 int n=size-1;
 while(!(size==0))
 {
-    for(int i=(size-1)/2;i>=0;i--)
+   
+    for(int i=size/2-1;i>=0;i--)
     {
         down(a,i,size);
     }
