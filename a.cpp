@@ -10,27 +10,21 @@
 using namespace std;
 
 
+
+
 int main()
 {
- int a[10];
-srand(time(NULL));
-for(int i=0;i<10;i++)
-{
-  a[i]=(rand()%100);
-}
 
-for(int p:a)
-{
-  cout<<p<<" ";
-}
-cout<<endl;
-heapsort(a,10);
-for(int p:a)
-{
-  cout<<p<<" ";
-}
-cout<<endl;
-  /* const int count=50000;
+       int a[]={1,2,4,5,3,2,6,22,67};
+     radixsort(a,9);
+       for(int i=0;i<9;i++)
+       {
+         cout<<a[i]<<" ";
+              
+       }
+ 
+       cout<<endl;
+ /* const int count=50000000;
     int *arr=new int[count];
      int *brr=new int[count];
       int *crr=new int[count];
@@ -38,6 +32,7 @@ cout<<endl;
        int *err=new int[count];
        int *frr=new int[count];
        int *grr=new int[count];
+        int *hrr=new int[count];
        srand(time(NULL));
        for(int i=0;i<count;i++)
        {
@@ -49,6 +44,7 @@ cout<<endl;
         err[i]=val;
         frr[i]=val;
         grr[i]=val;
+        hrr[i]=val;
        }
        clock_t begin,end;
 
@@ -82,15 +78,11 @@ cout<<endl;
        quick(frr,0,count);
        end=clock();
        cout<<"mergesort"<<(end-begin)*1.0/CLOCKS_PER_SEC<<"s"<<endl;
-*/
 
-      /*int a[]={3,3,623,46,3452,3,5,43,45,4,55,3,2};
-       mergesort(a,0,12);
-      for(int i=0;i<13;i++)
-      {
-        cout<<a[i]<<" ";
-      }
-      cout<<endl;
+        begin=clock();                                                                                           
+       heapsort(grr,count);
+       end=clock();
+       cout<<"heapsort"<<(end-begin)*1.0/CLOCKS_PER_SEC<<"s"<<endl;
 */
 
 

@@ -1,5 +1,7 @@
 #include<iostream>
+#include<vector>
 #include"sort.h"
+#include<string>
 using namespace std;
 
 void bubblesort(int a[],int n)
@@ -169,5 +171,41 @@ while(!(size==0))
 
 }
 
+void radixsort(int a[],int size)
+{
+    vector<vector<int>> radix;
+  
+    
+    int num=0;
+    for(int x=0;x<size;x++)
+    {
+       if(abs(a[x])>abs(a[num]))num=x;
 
+    }
+     int len=to_string(abs(a[num])).size();
+   
+     int m=10;
+     int n=1;
+     for(int i=0;i<len;i++,m*=10,n*=10)
+     {
+          radix.resize(20);
+        for(int j=0;j<size;j++)
+        {
+          int num=a[j]%m/n;
+          radix[num+10].push_back(a[j]);
+        }
+        int val=0;
+        for(vector<int> radix_:radix)
+        {
+          for(int radix__:radix_)
+          {
+            a[val]=radix__;
+            val++;
+          }
+        }
+        radix.clear();
+     }
+
+
+}
 
