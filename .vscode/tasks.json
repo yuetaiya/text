@@ -15,6 +15,7 @@
 				"${workspaceFolder}/diguierfen.cpp",
 				"${workspaceFolder}/sort.cpp",
 				"${workspaceFolder}/priorityqueue.cpp",
+				"${workspaceFolder}/hashtable.cpp",
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],

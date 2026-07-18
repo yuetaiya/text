@@ -5,25 +5,44 @@
 #include"diguierfen.h"
 #include"sort.h"
 
+#include<cmath>
 #include<time.h>
 #include"priorityqueue.h"
+
+#include"hashtable.h"
+
+
 using namespace std;
+
 
 
 
 
 int main()
 {
+hashtable hash;
+hash.insert(10);
 
-       int a[]={1,2,4,5,3,2,6,22,67};
-     radixsort(a,9);
-       for(int i=0;i<9;i++)
-       {
-         cout<<a[i]<<" ";
-              
-       }
  
-       cout<<endl;
+hash.insert(20);
+
+ 
+hash.insert(30);
+
+ 
+hash.insert(40);
+
+ 
+hash.insert(10);
+
+hash.remove(10);
+
+hash.insert(10);
+cout<<hash.getsize()<<endl;
+hash.print();
+ 
+
+
  /* const int count=50000000;
     int *arr=new int[count];
      int *brr=new int[count];
