@@ -16,6 +16,7 @@
 				"${workspaceFolder}/sort.cpp",
 				"${workspaceFolder}/priorityqueue.cpp",
 				"${workspaceFolder}/hashtable.cpp",
+				"${workspaceFolder}/listhashtable.cpp",
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],

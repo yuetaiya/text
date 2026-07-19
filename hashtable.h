@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+
 using namespace std;
 enum state
 {
@@ -27,15 +28,16 @@ void expand();
 public:
 
 hashtable();
+~hashtable();
 
 void insert(int val);
 void remove(int val);
-int find(int val);
 
 void print();
 
 int getnum();
 int getsize();
+int find(int val);
 
 
 };

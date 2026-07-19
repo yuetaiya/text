@@ -11,38 +11,31 @@
 
 #include"hashtable.h"
 
+#include"listhashtable.h"
+
 
 using namespace std;
 
 
 
-
-
 int main()
 {
-hashtable hash;
-hash.insert(10);
-
- 
-hash.insert(20);
-
- 
-hash.insert(30);
-
- 
-hash.insert(40);
-
- 
-hash.insert(10);
-
-hash.remove(10);
-
-hash.insert(10);
-cout<<hash.getsize()<<endl;
-hash.print();
- 
+listhashtable h;
+h.insert(4);
+h.insert(23);
+h.insert(2);
+h.insert(9);
+h.insert(65);
+h.insert(22);
+h.remove(22);
+cout<<h.getcap()<<" "<<h.getnum()<<endl;
+h.print();
 
 
+
+
+
+return 0;
  /* const int count=50000000;
     int *arr=new int[count];
      int *brr=new int[count];

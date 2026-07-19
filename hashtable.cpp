@@ -16,6 +16,11 @@ hashtable::hashtable()
   Node=new node[size];
 }
 
+hashtable::~hashtable()
+{
+   delete[] Node;
+}
+
 bool panduan(int val)//判断素数
 {
 
@@ -85,6 +90,7 @@ int hashtable::find(int val)
   while(Node[key].sta!=state::empty)
   {
    if(Node[key].data==val&&Node[key].sta==state::exist)return key;
+   
    key++;
    if(key==size)key=0;
    if(start==key)return -1;
@@ -94,9 +100,10 @@ int hashtable::find(int val)
 
 void hashtable::remove(int val)
 {
-int state_=find(val);
+int state_=find(val);//查找结果的状态，并非Node数据的状态
 if(state_==-1)return;
 Node[state_].sta=state::del;
+num--;
 
 }
 
@@ -123,3 +130,4 @@ int hashtable::getsize()
 {
    return size;
 }
+
