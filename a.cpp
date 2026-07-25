@@ -19,42 +19,40 @@
 #include<stdlib.h>
 #include<time.h>
 #include"bitmap.h"
+
+#include"BloomFilter.h"
 using namespace std;
 
 
 
 int main()
 {
-   bitmap bm(100);
-
+    BloomFilter Bloom;
     vector<int> vec;
     map<int,int> unmap;
     srand(time(NULL));
-    for(int i=0;i<1000;i++)
+    for(int i=0;i<10;i++)
     {
-      int a=rand()%1000;
-       vec.push_back(a);
-       if(bm.find(a))
-       {
+      int a=rand()%10;
+      if(!Bloom.find("a"))
+      {
+        Bloom.insert("a");
+        unmap.insert(make_pair(a,1));
+      }
+      else{
         unmap[a]++;
-       }
-       else
-       {
-        bm.set(a);
-       unmap.insert(make_pair(a,1));
-       }
+      }
+       vec.push_back(a);
+    }
+
+    for(auto a:vec)
+    {
+      cout<<a<<" ";
+    }
+    cout<<endl;
+    for(auto a:unmap)
+    {
+       cout<<a.first<<"重复"<<a.second<<endl;
     }
    
-   cout<<endl;
-   for(auto a:unmap)
-   {
-    if(a.second>1)
-    {
-      cout<<a.first<<"重复"<<a.second<<"次"<<endl;
-    }
-   }
-   cout<<endl;
-
-
-    
 } 
