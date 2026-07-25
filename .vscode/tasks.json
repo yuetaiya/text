@@ -19,6 +19,7 @@
 				"${workspaceFolder}/listhashtable.cpp",
 				"${workspaceFolder}/bitmap.cpp",
 			    	"${workspaceFolder}/BloomFilter.cpp",
+					"${workspaceFolder}/Heap.cpp",
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],
