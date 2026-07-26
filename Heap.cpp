@@ -21,16 +21,17 @@ void Heap::up(int idx)
 
 void Heap::down(int idx)
 {
+    int n=heap.size();
     while(true)
   {
    int left=idx*2+1;
    int right=idx*2+2;
    int max=idx;
-   if(heap[left]>heap[max])
+   if(left<n&&heap[left]>heap[max])
    {
     max=idx*2+1;
    }
-   if(heap[right]>heap[max])
+   if(right<n&&heap[right]>heap[max])
    {
     max=idx*2+2;
    }

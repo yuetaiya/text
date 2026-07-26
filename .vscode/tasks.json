@@ -20,6 +20,7 @@
 				"${workspaceFolder}/bitmap.cpp",
 			    	"${workspaceFolder}/BloomFilter.cpp",
 					"${workspaceFolder}/Heap.cpp",
+						"${workspaceFolder}/consistenhash.cpp",
 				"-o",
 				"${fileDirname}\\${fileBasenameNoExtension}.exe"
 			],

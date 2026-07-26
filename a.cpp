@@ -20,39 +20,45 @@
 #include<time.h>
 #include"bitmap.h"
 
+#include"Heap.h"
 #include"BloomFilter.h"
+#include"consistenhash.h"
+#include<sstream>
 using namespace std;
+
+
 
 
 
 int main()
 {
-    BloomFilter Bloom;
-    vector<int> vec;
-    map<int,int> unmap;
-    srand(time(NULL));
-    for(int i=0;i<10;i++)
-    {
-      int a=rand()%10;
-      if(!Bloom.find("a"))
-      {
-        Bloom.insert("a");
-        unmap.insert(make_pair(a,1));
-      }
-      else{
-        unmap[a]++;
-      }
-       vec.push_back(a);
-    }
+  ConsistenHash ch(1000);
+  ch.addnode("无敌少侠");
+  ch.addnode("熊出没");
+  ch.addnode("国宝特工");
+   ch.addnode("猪猪侠");
+  map<string,int>node;
+  node["无敌少侠"]=0;
+  node["熊出没"]=0;
+  node["国宝特工"]=0;
+  node["猪猪侠"]=0;
+  ch.removenode("无敌少侠");
+  for(int i=0;i<10000;i++)
+  {
+    string name="用户"+to_string(i);
+    string str=ch.getkey(name);
+    if(str=="无敌少侠"){node["无敌少侠"]++;}
+    if(str=="熊出没"){node["熊出没"]++;}
+    if(str=="国宝特工"){node["国宝特工"]++;}
+    if(str=="猪猪侠"){node["猪猪侠"]++;}
+  }
+  
 
-    for(auto a:vec)
-    {
-      cout<<a<<" ";
-    }
-    cout<<endl;
-    for(auto a:unmap)
-    {
-       cout<<a.first<<"重复"<<a.second<<endl;
-    }
-   
+  for(auto a:node)
+  {
+   cout<<a.first<<":"<<a.second<<endl;
+  }
+
+
+
 } 
